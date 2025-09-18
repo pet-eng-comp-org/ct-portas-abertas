@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
       <div className={styles.textContainer}>
         <p>
-        Em breve, a edição 2024 do CT de Portas Abertas! O evento faz parte da Mostra de Profissões da Prograd, que ocorrerá nos dias 12 e 13 de novembro de 2024. O CT de Portas Abertas tem como objetivo divulgar e promover os cursos de Engenharia e Tecnologia do Centro Tecnológico da UFES para alunos do ensino médio e técnico, sendo uma oportunidade única de obter informações valiosas sobre as diversas áreas de atuação dos cursos oferecidos pelo CT.
+        Em breve, a edição 2025 do CT de Portas Abertas! O evento faz parte da Mostra de Profissões da Prograd, que ocorrerá nos dias 07 e 08 de outubro de 2025. O CT de Portas Abertas tem como objetivo divulgar e promover os cursos de Engenharia e Tecnologia do Centro Tecnológico da UFES para alunos do ensino médio e técnico, sendo uma oportunidade única de obter informações valiosas sobre as diversas áreas de atuação dos cursos oferecidos pelo CT.
           <br />
           <br />
           Atividades previstas na programação do evento:
@@ -40,9 +40,8 @@ const Home: NextPage = () => {
             cursos.
           </li>
           <li>Mostra de projetos.</li>
-          <li>Palestra Pocket sobre Inteligência Artificial (13/11 às 10h).</li>
-          <li>1ª Semana de Informática em Saúde (<a href="https://life.inf.ufes.br/sis/" target="blank">Clique aqui para ver a programação</a>).</li>
-          <li>Exposição do Museu Capixaba do Computador - 12/11 a partir das 13h (<a href="https://www.instagram.com/museucapixaba/profilecard/?igsh=YWJzbzV2ZG0zY3I3" target="blank">Clique aqui para ver o Instagram do MCC</a>).</li>
+          <li>Palestra Pocket sobre Inteligência Artificial (08/10 às 10h).</li>
+          <li>2ª Semana de Informática em Saúde (<a href="https://life.inf.ufes.br/sis/" target="blank">Clique aqui para ver a programação</a>).</li>
           <li>Apresentação da banda dos alunos do CT.</li>
           <li>Apresentação da banda dos professores do CT.</li>
         </ol>

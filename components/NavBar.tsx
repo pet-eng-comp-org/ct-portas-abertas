@@ -115,7 +115,7 @@ export default function NavBar({ localPage }: NavBarProps) {
 
         <Link href="./photos">
           <li id={page == "photos" ? styles.selected : ""}>
-            FOTOS 2023
+            FOTOS 2024
           </li>
         </Link>
       </ul>

@@ -23,7 +23,7 @@ const Pockets: NextPage = () =>{
     </div>
     
     <h1>PALESTRA DINÂMICA DE CURTA DURAÇÃO</h1>
-    <p className={styles.size}>A palestra será ministrada pelo professor André Pacheco com o assunto Inteligência Artificial, e ocorrerá na quarta-feira dia 13, às 10h.
+    <p className={styles.size}>Na quarta-feira, dia 08, às 10h, o professor André Pacheco apresentará uma palestra sobre Inteligência Artificial.
       (<a href="https://www.linkedin.com/in/pacheco-andre/" target="blank">Clique aqui para acessar o Linkedin do André.</a>)</p>
     <div className={styles.subtitle_container}>
       <div>

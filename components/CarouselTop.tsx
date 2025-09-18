@@ -7,12 +7,12 @@ import Image from "next/image";
 
 export function CarouselTop() {
   var items = [
-    { "id": 1, "title": "", "imageUrl": "/Fotos-2023-1.jpeg" },
-    { "id": 2, "title": "", "imageUrl": "/Fotos-2023-7.jpeg" },
-    { "id": 3, "title": "", "imageUrl": "/Fotos-2023-3.jpeg" },
-    { "id": 4, "title": "", "imageUrl": "/Fotos-2023-4.jpeg" },
-    { "id": 5, "title": "", "imageUrl": "/Fotos-2023-5.jpeg" },
-    { "id": 6, "title": "", "imageUrl": "/Fotos-2023-6.jpeg" }
+    { "id": 1, "title": "", "imageUrl": "/Fotos-2024-1.jpeg" },
+    { "id": 2, "title": "", "imageUrl": "/Fotos-2024-2.jpeg" },
+    { "id": 3, "title": "", "imageUrl": "/Fotos-2024-3.jpeg" },
+    { "id": 4, "title": "", "imageUrl": "/Fotos-2024-4.jpeg" },
+    { "id": 5, "title": "", "imageUrl": "/Fotos-2024-5.jpeg" },
+    { "id": 6, "title": "", "imageUrl": "/Fotos-2024-6.jpeg" }
 
   ]
 

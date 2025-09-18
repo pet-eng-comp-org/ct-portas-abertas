@@ -40,6 +40,9 @@
 
 .supportContainer {
   width: 30%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .colaboratorsContainer {

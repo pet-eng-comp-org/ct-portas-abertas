@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from '../styles/components/Footer.module.css'
-import UfesLogo from '../assets/Ufes 70 anos.svg'
+import UfesLogo from '../assets/UfesLogo.svg'
 import IntrocompLogo from '../assets/IntrocompLogo.svg'
 import PETLogo from '../assets/PETLogo.svg'
 import CTLogo from '../assets/CT-Ufes.png'
@@ -10,7 +10,6 @@ import FINDESLogo from '../assets/FINDES.svg'
 import CtJuniorLogo from '../assets/CT Júnior.svg'
 import VitoriaBajaLogo from '../assets/Vitória Baja Branca.png'
 import CREALogo from '../assets/CREALogo.png'
-import CESANLogo from '../assets/CESAN.png'
 import PETMECANICALogo from '../assets/PETMECANICALogo.png'
 import PETELETRICALogo from '../assets/PETELETRICALogo.png'
 import SolaresLogo from '../assets/Projeto Solares.png'
@@ -23,7 +22,7 @@ export default function Footer() {
         <p>Email para contato: <span onClick={()=>{window.location.href = "mailto:mail@example.org";}}>ctportasabertas@ufes.br</span></p>
         <h3>Realização</h3>
         <div className={styles.supportContainer}>
-          <div><Image src={UfesLogo} alt="Ufes logo rodape" layout="fill"  objectFit={'contain'} /></div>
+          <div className={styles.ufesLogo}><Image src={UfesLogo} alt="Ufes logo rodape" layout="fill"  objectFit={'contain'} /></div>
           <div><Image src={CTLogo} alt="Centro Tecnologico logo rodape" layout="fill"  objectFit={'contain'} /></div>
         </div>
       </div>
@@ -34,7 +33,6 @@ export default function Footer() {
           <div><Image src={PROEXLogo} alt="PROEX logo rodape" layout="fill"  objectFit={'contain'} /></div>
           <div><Image src={FINDESLogo} alt="FINDES logo rodape" layout="fill"  objectFit={'contain'} /></div>
           <div><Image src={CREALogo} alt="CREA logo rodape" layout="fill"  objectFit={'contain'} /></div>
-          <div><Image src={CESANLogo} alt="CESAN logo rodape" layout="fill"  objectFit={'contain'} /></div>
         </div>
 
         <div className={styles.colaboratorsContainer}>

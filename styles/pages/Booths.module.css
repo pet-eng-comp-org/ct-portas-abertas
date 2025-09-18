@@ -35,13 +35,14 @@
   justify-content: space-around;
   width: 30rem;
   color: var(--orange);
-  margin-top: -2rem;
+  margin-top: 2rem;
 }
 
 .subtitle_container div{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 8px;
 }
 
 .subtitle_container div h2{
