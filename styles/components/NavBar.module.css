@@ -22,10 +22,18 @@
 }
 
 .logoContainer div {
+  margin-right: 2rem;
   position: relative;
   width: 9rem;
   height: 90%;
   margin-left: 1rem;
+}
+
+.logoContainer .mostraLogo {
+  width: 14rem;   
+  height: 9rem;
+  margin-right: -2.5rem;
+  margin-top: -0.6rem;
 }
 
 .navbarContainer ul {
@@ -91,4 +99,5 @@
 
 #ufeslogo {
   width: 6rem;
+  margin-left: -1rem;
 }

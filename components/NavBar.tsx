@@ -44,7 +44,7 @@ export default function NavBar({ localPage }: NavBarProps) {
         />
       </Head>
       <div className={styles.logoContainer}>
-        <div title="Mostra de Profissões 2022">
+        <div className={styles.mostraLogo} title="Mostra de Profissões 2022">
           <a href={PROGRADURL}>
             <Image
               src={MOSTRALogo}
