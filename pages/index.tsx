@@ -68,7 +68,7 @@ const Home: NextPage = () => {
                 - 10h.
               </li>
               <li>
-                Desafio "Street Fighter" com o professor e ex-Pro Player Luis
+                Desafio Street Fighter com o professor e ex-Pro Player Luis
                 Souza - 15h30.
               </li>
               <li>Encerramento - 17h.</li>
