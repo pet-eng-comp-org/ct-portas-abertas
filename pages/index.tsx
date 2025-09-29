@@ -64,7 +64,7 @@ const Home: NextPage = () => {
               <li>Estandes dos cursos de Engenharia e Computação - 08 às 17h.</li>
               <li>Museu Capixaba do Computador - 08 às 12h.</li>
               <li>
-                Talk sobre Inteligência Artificial com o Prof. André Pacheco
+                Talk sobre Inteligência Artificial com o Professor André Pacheco
                 - 10h.
               </li>
               <li>
