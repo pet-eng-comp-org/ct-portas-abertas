@@ -11,7 +11,6 @@ import HeaderBanner from "../assets/HEADER.png";
 export const OpenDate = new Date("2022-11-01T00:00:00.000Z");
 
 const Home: NextPage = () => {
-
   return (
     <main className={styles.container}>
       <NavBar localPage={"index"} />
@@ -28,27 +27,66 @@ const Home: NextPage = () => {
 
       <div className={styles.textContainer}>
         <p>
-        Em breve, a edição 2025 do CT de Portas Abertas! O evento faz parte da Mostra de Profissões da Prograd, que ocorrerá nos dias 07 e 08 de outubro de 2025. O CT de Portas Abertas tem como objetivo divulgar e promover os cursos de Engenharia e Tecnologia do Centro Tecnológico da UFES para alunos do ensino médio e técnico, sendo uma oportunidade única de obter informações valiosas sobre as diversas áreas de atuação dos cursos oferecidos pelo CT.
+          Em breve, a edição 2025 do CT de Portas Abertas! O evento faz parte da
+          Mostra de Profissões da Prograd, que ocorrerá nos dias 07 e 08 de
+          outubro de 2025. O CT de Portas Abertas tem como objetivo divulgar e
+          promover os cursos de Engenharia e Tecnologia do Centro Tecnológico da
+          UFES para alunos do ensino médio e técnico, sendo uma oportunidade
+          única de obter informações valiosas sobre as diversas áreas de atuação
+          dos cursos oferecidos pelo CT.
           <br />
           <br />
-          Atividades previstas na programação do evento:
+          Programação especial:
         </p>
 
         <ol>
           <li>
-            Visitas guiadas aos laboratórios (pesquisa/extensão) dos
-            cursos.
+            07/10 (terça-feira):
+            <ul>
+              <li>
+                Visitas guiadas aos laboratórios de pesquisa e extensão do CT
+                - 08 às 17h.
+              </li>
+              <li>Estandes dos cursos de Engenharia e Computação - 08 às 17h.</li>
+              <li>The Ohmies: Banda dos alunos da Engenharia Elétrica - 10h.</li>
+              <li>EngRockers: Banda dos professores do CT - 14h.</li>
+              <li>Encerramento - 17h.</li>
+            </ul>
           </li>
-          <li>Mostra de projetos.</li>
-          <li>Palestra Pocket sobre Inteligência Artificial (08/10 às 10h).</li>
-          <li>2ª Semana de Informática em Saúde (<a href="https://life.inf.ufes.br/sis/" target="blank">Clique aqui para ver a programação</a>).</li>
-          <li>Apresentação da banda dos alunos do CT.</li>
-          <li>Apresentação da banda dos professores do CT.</li>
+
+          <li>
+            08/10 (quarta-feira):
+            <ul>
+              <li>
+                Visitas guiadas aos laboratórios de pesquisa e extensão do CT
+                - 08 às 17h.
+              </li>
+              <li>Estandes dos cursos de Engenharia e Computação - 08 às 17h.</li>
+              <li>Museu Capixaba do Computador - 08 às 12h.</li>
+              <li>
+                Talk sobre Inteligência Artificial com o Prof. André Pacheco
+                - 10h.
+              </li>
+              <li>
+                Desafio "Street Fighter" com o professor e ex-Pro Player Luis
+                Souza - 15h30.
+              </li>
+              <li>Encerramento - 17h.</li>
+
+            </ul>
+          </li>
         </ol>
 
         <p>
-          A banda EngRockers, composta por alguns professores do Centro Tecnológico, 
-          vai levantar o astral com muito Rock in Roll no estacionamento do CT 4. 
+          Participe, também, da 2ª Semana de Informática em Saúde (
+          <a
+            href="https://life.inf.ufes.br/sis/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Clique aqui para conferir a programação completa
+          </a>
+          ).
         </p>
       </div>
 

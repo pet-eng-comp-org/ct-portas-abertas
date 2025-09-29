@@ -20,22 +20,21 @@ const Visitations: NextPage = () => {
 
                 <h4>As visitas guiadas serão divididas em Trilhas Temáticas, da seguinte forma:</h4>
                 <ul>
-                    <li><span>Trilha 1 (manhã):</span> Engenharia Elétrica 01 - LECO, PET Elétrica e LEPAC</li>
-                    <li><span>Trilha 1 (tarde):</span> Engenharia Elétrica 01 - LABVISIO, PET Elétrica e LEPAC</li>
-                    <li><span>Trilha 2 (manhã):</span> Engenharia Elétrica 02 - LRTA, LABVISIO e LABTEL</li>
-                    <li><span>Trilha 2 (tarde):</span> Engenharia Elétrica 02 - LABAIR e LRTA</li>
-                    <li><span>Trilha 3:</span> Engenharia Mecânica 01 - LaMEFT, LabSensores e LabGuará</li>
-                    <li><span>Trilha 4:</span> Engenharia Mecânica 02 - LaTecMec e TriCorrMat</li>
-                    <li><span>Trilha 5:</span> Engenharia Civil - Geotecnia, LabDest, Lemac, L@bCIV e LabesBIM</li>
-                    <li><span>Trilha 6:</span> Engenharia Ambiental - LabHidro, LabSan e NqualirAr</li>
-                    <li><span>Trilha 7:</span> Computação 01 - LCAD, PET Eng Comp e ERUS</li>
-                    <li><span>Trilha 8:</span> Computação 02 - Informática na Saúde (postos no auditório do CT 13)</li>
-                    <li><span>Trilha 9 (manhã):</span> Engenharia de Produção - Laboratório de Manufatura Integrada, LIEP, Modelar e Sala de Metodologias Ativas</li>
-                    <li><span>Trilha 9 (tarde):</span> Engenharia de Produção - LABTar, Laboratório de Manufatura Integrada, LIEP e Modelar</li>
-                    <li><span>Trilha 10:</span> Inovação - Espaço Empreendedor (antigo prédio da gráfica universitária)</li>
+                    <li><span>Engenharia Elétrica:</span> Trilha 1 - LabVisio e HCS</li>
+                    <li><span>Engenharia Elétrica:</span> Trilha 2 - LabAir e LRTA</li>
+                    <li><span>Engenharia Elétrica:</span> Trilha 3 - LECO e PET Elétrica</li>
+                    <li><span>Engenharia Elétrica:</span> Trilha 4 - Labtel</li>
+                    <li><span>Engenharia Mecânica:</span> Trilha 1 - LabSensores e LaMEFT</li>
+                    <li><span>Engenharia Mecânica:</span> Trilha 2 - LabTecMec e TriCorrMat</li>
+                    <li><span>Engenharia Mecânica:</span> Trilha 3 - NEMOG</li>
+                    <li><span>Computação:</span> Trilha 1 - LCAD, PET Eng Comp e ERUS</li>
+                    <li><span>Computação:</span> Trilha 2 - HCS e Life (Informática na Saúde)</li>
+                    <li><span>Engenharia Ambiental:</span> Trilha única - Lagesa, LabHidro, LabSan e NqualiAr</li>
+                    <li><span>Engenharia Civil:</span> Trilha única - Geotecnia, LabDest, Lemac, Concres (Lemac)</li>
+                    <li><span>Engenharia de Produção:</span> Trilha única - Laboratório de Manufatura Integrada, LIEP, ProjetoS6, ConneCT e Design Lab</li>
+                    <li><span>Trilha Inovação:</span> Espaço Empreendedor</li>
                     
-                </ul>
-                            
+                </ul>             
                     
             </div>
 

@@ -134,9 +134,19 @@
   margin-top: 1rem;
 }
 
+.textContainer ul {
+  list-style-type: disc; 
+  margin-left: 1.5rem;   
+  padding-left: 0;       
+}
+
 .textContainer ol {
   text-align: left;
   list-style: upper-roman;
+}
+
+.textContainer ol > li {
+  margin-bottom: 0.5rem; 
 }
 
 .textContainer ol span {
