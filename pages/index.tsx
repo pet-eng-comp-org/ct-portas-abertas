@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           Em breve, a edição 2025 do CT de Portas Abertas! O evento faz parte da
           Mostra de Profissões da Prograd, que ocorrerá nos dias 07 e 08 de
           outubro de 2025. O CT de Portas Abertas tem como objetivo divulgar e
-          promover os cursos de Engenharia e Tecnologia do Centro Tecnológico da
+          promover os cursos de Engenharia e Computação do Centro Tecnológico da
           UFES para alunos do ensino médio e técnico, sendo uma oportunidade
           única de obter informações valiosas sobre as diversas áreas de atuação
           dos cursos oferecidos pelo CT.
@@ -64,8 +64,7 @@ const Home: NextPage = () => {
               <li>Estandes dos cursos de Engenharia e Computação - 08 às 17h.</li>
               <li>Museu Capixaba do Computador - 08 às 12h.</li>
               <li>
-                Talk sobre Inteligência Artificial com o Professor André Pacheco
-                - 10h.
+              Palestra &quot;Como treinar a sua IA?&quot; com o Professor André Pacheco - 10h.
               </li>
               <li>
                 Desafio Street Fighter com o professor e ex-Pro Player Luis
