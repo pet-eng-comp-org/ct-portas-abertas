@@ -64,7 +64,7 @@ const Home: NextPage = () => {
               <li>Estandes dos cursos de Engenharia e Computação - 08 às 17h.</li>
               <li>Museu Capixaba do Computador - 08 às 12h.</li>
               <li>
-              Palestra &quot;Como treinar a sua IA?&quot; com o Professor André Pacheco - 10h.
+              Palestra &quot;Como treinar a sua IA&quot; com o Professor André Pacheco - 10h.
               </li>
               <li>
                 Desafio Street Fighter com o professor e ex-Pro Player Luis

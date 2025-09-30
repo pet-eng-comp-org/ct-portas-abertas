@@ -24,7 +24,7 @@ const Pockets: NextPage = () =>{
     
     <h1>PALESTRA DINÂMICA DE CURTA DURAÇÃO</h1>
     <p className={styles.size}>
-    {`Na quarta-feira, dia 08, às 10h, o professor André Pacheco apresentará a palestra "Como treinar a sua IA?". `}
+    {`Na quarta-feira, dia 08, às 10h, o professor André Pacheco apresentará a palestra "Como treinar a sua IA". `}
     (<a href="https://www.linkedin.com/in/pacheco-andre/" target="blank">Clique aqui para acessar o Linkedin do André</a>)</p>
     <div className={styles.subtitle_container}>
       <div>
