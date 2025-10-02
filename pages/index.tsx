@@ -87,6 +87,11 @@ const Home: NextPage = () => {
           </a>
           ).
         </p>
+
+        <p>
+          OBS.: O evento CT de Portas Abertas é totalmente gratuito e não é necessário realizar inscrição!
+        </p>
+
       </div>
 
       <ProGrad />

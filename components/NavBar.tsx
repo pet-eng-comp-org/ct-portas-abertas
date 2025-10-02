@@ -36,7 +36,7 @@ export default function NavBar({ localPage }: NavBarProps) {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Espaço dedicado à inscrição no evento CT de Portas Abertas da UFES, venha conhecer!"
+          content="Espaço dedicado ao evento CT de Portas Abertas da UFES, venha conhecer!"
         />
         <meta
           content="CT de Portas Abertas - UFES - ES"
