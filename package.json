@@ -2,6 +2,7 @@
   "name": "ct-portas-abertas",
   "version": "0.1.0",
   "private": true,
+  "description": "Site do CT de Portas Abertas — PET Engenharia de Computação, UFES.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

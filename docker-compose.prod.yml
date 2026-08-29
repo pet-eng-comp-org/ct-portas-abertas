@@ -1,9 +1,9 @@
 # PRODUCAO — stack ct-portas-abertas na VM. O Portainer puxa este arquivo do
-# repo (branch 2023) e, com force-pull no auto-update, aplica a imagem :latest
+# repo (branch main) e, com force-pull no auto-update, aplica a imagem :latest
 # nova sozinho a cada build. Site estatico, sem backend.
 services:
   front-end:
-    image: ghcr.io/pet-eng-comp-ufes/frontend-ct-portas-abertas:latest
+    image: ghcr.io/pet-eng-comp-org/ct-portas-abertas:latest
     container_name: ct-portas_front-end
     restart: unless-stopped
     labels:
