@@ -2,16 +2,16 @@
 # repo (branch main) e, com force-pull no auto-update, aplica a imagem :latest
 # nova sozinho a cada build. Site 100% estatico servido por nginx (sem backend).
 services:
-  front-end:
+  ct-portas-abertas:
     image: ghcr.io/pet-eng-comp-org/ct-portas-abertas:latest
-    container_name: ct-portas_front-end
+    container_name: ct-portas-abertas
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.ct-portas_front-end.rule=Host(`ctportasabertas.pet.inf.ufes.br`)"
-      - "traefik.http.services.ct-portas_front-end.loadbalancer.server.port=80"
-      - "traefik.http.routers.ct-portas_front-end.entrypoints=websecure"
-      - "traefik.http.routers.ct-portas_front-end.tls.certresolver=le"
+      - "traefik.http.routers.ct-portas-abertas.rule=Host(`ctportasabertas.pet.inf.ufes.br`)"
+      - "traefik.http.services.ct-portas-abertas.loadbalancer.server.port=80"
+      - "traefik.http.routers.ct-portas-abertas.entrypoints=websecure"
+      - "traefik.http.routers.ct-portas-abertas.tls.certresolver=le"
       - "traefik.docker.network=traefik"
     networks:
       - traefik
