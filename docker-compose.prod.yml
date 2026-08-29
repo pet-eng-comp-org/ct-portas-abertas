@@ -1,6 +1,6 @@
 # PRODUCAO — stack ct-portas-abertas na VM. O Portainer puxa este arquivo do
 # repo (branch main) e, com force-pull no auto-update, aplica a imagem :latest
-# nova sozinho a cada build. Site estatico, sem backend.
+# nova sozinho a cada build. Site 100% estatico servido por nginx (sem backend).
 services:
   front-end:
     image: ghcr.io/pet-eng-comp-org/ct-portas-abertas:latest
@@ -9,7 +9,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.ct-portas_front-end.rule=Host(`ctportasabertas.pet.inf.ufes.br`)"
-      - "traefik.http.services.ct-portas_front-end.loadbalancer.server.port=3000"
+      - "traefik.http.services.ct-portas_front-end.loadbalancer.server.port=80"
       - "traefik.http.routers.ct-portas_front-end.entrypoints=websecure"
       - "traefik.http.routers.ct-portas_front-end.tls.certresolver=le"
       - "traefik.docker.network=traefik"

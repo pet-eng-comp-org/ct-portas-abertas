@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // Fora da Vercel (na VM) o Next emite um servidor mínimo em .next/standalone.
-  ...(process.env.VERCEL ? {} : { output: "standalone" }),
+  // Site 100% estatico: `next export` gera HTML puro em out/, servido por nginx.
+  images: { unoptimized: true }, // sem otimizador on-the-fly no destino estatico
+  trailingSlash: true,           // gera /rota/index.html, o nginx serve direto
 }
 module.exports = nextConfig

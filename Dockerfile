@@ -1,16 +1,12 @@
+# --- build: gera o site estatico (Node so aqui, no build) ---
 FROM node:18-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-RUN npm run build
+RUN npm run export   # next build && next export -> /app/out
 
-FROM node:18-alpine
-WORKDIR /app
-ENV NODE_ENV=production PORT=3000 HOSTNAME=0.0.0.0
-COPY --from=build /app/public ./public
-COPY --from=build /app/.next/standalone ./
-COPY --from=build /app/.next/static ./.next/static
-EXPOSE 3000
-USER node
-CMD ["node","server.js"]
+# --- runtime: serve HTML puro, sem Node (menos superficie de ataque) ---
+FROM nginx:1.27-alpine
+COPY --from=build /app/out /usr/share/nginx/html
+EXPOSE 80
