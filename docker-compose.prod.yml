@@ -3,7 +3,7 @@
 # nova sozinho a cada build. Site 100% estatico servido por nginx (sem backend).
 services:
   ct-portas-abertas:
-    image: ghcr.io/pet-eng-comp-org/ct-portas-abertas@sha256:d2ecfe27a9b99095d7ca9609379f7b29e72be567dab1924d8e4e1c44e6f153a0
+    image: ghcr.io/pet-eng-comp-org/ct-portas-abertas@sha256:f52fe4014faa8dad6558985956dcf50b621c772095fc28159d9d183232789ce8
     container_name: ct-portas-abertas
     restart: unless-stopped
     labels:
