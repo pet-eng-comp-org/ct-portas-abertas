@@ -1,26 +1,105 @@
 name: Publica imagem no GHCR
+
+# Fluxo de deploy deste repositorio (padrao dos servicos git-ops do PET):
+#
+#   merge na main -> este workflow constroi e publica a imagem -> o mesmo
+#   workflow escreve o DIGEST recem-publicado no docker-compose.prod.yml e
+#   commita na main -> o Portainer (que acompanha este repositorio) aplica.
+#
+# O compose aponta para um digest, nunca para uma tag movel. Com tag movel o
+# gatilho do Portainer e o commit do codigo, e o commit existe antes da imagem:
+# em 10/09/2026 isso mordeu o avaliacao-360: o polling passou nos segundos
+# entre o merge e a publicacao, puxou a imagem velha, marcou o commit como
+# aplicado e o deploy nunca saiu.
+# Com digest, o commit que dispara o deploy e sempre posterior a imagem existir.
+#
+# O commit de digest e o registro do deploy: tem data, aponta o commit de
+# codigo que o originou e `git revert` nele volta a versao anterior.
 on:
   push:
     branches: [main]
-    paths: ['pages/**','public/**','styles/**','components/**','src/**','next.config.js','package.json','package-lock.json','Dockerfile']
+    paths:
+      - 'pages/**'
+      - 'components/**'
+      - 'public/**'
+      - 'styles/**'
+      - 'src/**'
+      - 'next.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'Dockerfile'
+      - '.github/workflows/publica-imagem.yml'
+  pull_request:
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
+    outputs:
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: docker/login-action@v3
+        if: github.event_name != 'pull_request'
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: docker/build-push-action@v6
+
+      - id: build
+        uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          # Em pull request a imagem e construida mas nao publicada: serve para
+          # o Dockerfile ser testado antes do merge.
+          push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:prod
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:sha-${{ github.sha }}
+
+  # Publicar nao e implantar: quem implanta e o commit abaixo.
+  implanta:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Escreve o digest no compose de producao
+        env:
+          DIGEST: ${{ needs.build.outputs.digest }}
+        run: |
+          set -euo pipefail
+          ARQ=docker-compose.prod.yml
+          IMG="ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}"
+
+          # casa tanto uma tag movel quanto um digest anterior
+          sed -i -E "s#(image: )${IMG}(:[A-Za-z0-9._-]+|@sha256:[a-f0-9]+)#\1${IMG}@${DIGEST}#" "$ARQ"
+
+          if git diff --quiet -- "$ARQ"; then
+            echo "O compose ja aponta para ${DIGEST} — nada a implantar."
+            exit 0
+          fi
+
+          CURTO="${GITHUB_SHA:0:8}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qm "deploy: imagem do commit ${CURTO}
+
+          Digest: ${DIGEST}
+          Codigo: ${GITHUB_SHA}
+
+          O Portainer acompanha este arquivo e aplica em ate 5 minutos.
+          Para reverter esta implantacao: git revert deste commit." -- "$ARQ"
+
+          # push com GITHUB_TOKEN nao dispara workflow, entao nao ha laco
+          git push -q origin HEAD:main
+          echo "digest ${DIGEST} publicado na main"
