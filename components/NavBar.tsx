@@ -38,10 +38,7 @@ export default function NavBar({ localPage }: NavBarProps) {
           name="description"
           content="Espaço dedicado ao evento CT de Portas Abertas da UFES, venha conhecer!"
         />
-        <meta
-          content="CT de Portas Abertas - UFES - ES"
-          property="og:title"
-        />
+        <meta content="CT de Portas Abertas - UFES - ES" property="og:title" />
       </Head>
       <div className={styles.logoContainer}>
         <div className={styles.mostraLogo} title="Mostra de Profissões 2022">
@@ -108,15 +105,11 @@ export default function NavBar({ localPage }: NavBarProps) {
         </Link> */}
 
         <Link href="./pockets">
-          <li id={page == "pockets" ? styles.selected : ""}>
-            PALESTRA POCKET
-          </li>
+          <li id={page == "pockets" ? styles.selected : ""}>PALESTRA POCKET</li>
         </Link>
 
         <Link href="./photos">
-          <li id={page == "photos" ? styles.selected : ""}>
-            FOTOS 2024
-          </li>
+          <li id={page == "photos" ? styles.selected : ""}>FOTOS</li>
         </Link>
       </ul>
     </div>
