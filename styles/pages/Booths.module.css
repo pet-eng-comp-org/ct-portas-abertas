@@ -7,11 +7,11 @@
 
 .banner_container {
   width: 100%;
-  background-color: #794d7c;
+  background-color: var(--dark);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow:hidden;
+  overflow: hidden;
   box-shadow: 0px 0px 10px black;
 }
 
@@ -20,17 +20,19 @@
   width: 70%;
 }
 
-.size{
+.size {
   font-size: 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.container h1, .container h2, .container h3 {
+.container h1,
+.container h2,
+.container h3 {
   font-weight: 100;
 }
 
-.subtitle_container{
+.subtitle_container {
   display: flex;
   justify-content: space-around;
   width: 30rem;
@@ -38,25 +40,25 @@
   margin-top: 2rem;
 }
 
-.subtitle_container div{
+.subtitle_container div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 8px;
 }
 
-.subtitle_container div h2{
+.subtitle_container div h2 {
   text-decoration: underline;
 }
 
-.booth_card{
+.booth_card {
   width: 30rem;
   height: 10rem;
-  background-color: var(--darkBlue);
+  background-color: var(--dark);
   display: flex;
   justify-content: space-between;
 
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .booth_card h1 {
@@ -70,7 +72,7 @@
   justify-content: space-between;
   background-color: var(--dark);
   width: 30%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .booth_title {
@@ -95,7 +97,7 @@
   color: var(--orange);
 }
 
-.booth_card:hover .lab_title{
+.booth_card:hover .lab_title {
   background-color: var(--orange);
   color: var(--dark);
 }
@@ -143,15 +145,14 @@
 
 .scheduleContainer::-webkit-scrollbar {
   background-color: var(--darkBlue);
-  width: .5rem;
+  width: 0.5rem;
 }
 
 .scheduleContainer::-webkit-scrollbar-thumb {
   background-color: var(--orange);
 }
 
-
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .container section {
     display: flex;
     flex-direction: column;
@@ -163,19 +164,19 @@
     width: 90%;
   }
 
-  .container section div div h1{
+  .container section div div h1 {
     font-size: 10pt;
   }
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .container h1:first-of-type {
-    text-align: center
+    text-align: center;
   }
-  
+
   .subtitle_container {
     height: 7em;
-    width: 100%; 
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;

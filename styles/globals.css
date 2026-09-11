@@ -6,8 +6,19 @@ body {
   color: white;
   padding: 0;
   margin: 0;
-  font-family: "Jockey One", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    "Jockey One",
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
   font-weight: 100;
 }
 
@@ -23,7 +34,7 @@ a {
 :root {
   --lightBlue: #174f17ff;
   --white: #fefefeff;
-  --mediumBlue: #9a719d;
-  --darkBlue: #9a719d;
-  --dark: #794d7c;
+  --mediumBlue: #1e366d;
+  --darkBlue: #172e64;
+  --dark: #0c1935;
 }
