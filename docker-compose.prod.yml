@@ -4,6 +4,11 @@
 services:
   ct-portas-abertas:
     image: ghcr.io/pet-eng-comp-org/ct-portas-abertas@sha256:9c5d692e9f5be1465148d5272b8b985cbc9b0b421b104acc5ce256edb8130695
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     container_name: ct-portas-abertas
     restart: unless-stopped
     labels:
