@@ -1,0 +1,50 @@
+# Padrão do PET para dependências (o mesmo em todos os repositórios):
+# - semanal, às segundas;
+# - minor e patch num PR por grupo; major sempre em PR próprio, para ser lido
+#   e testado sozinho;
+# - as correções de segurança vêm juntas num PR só.
+# Mesclar um PR daqui passa pelo CI e, na branch principal, implanta.
+
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      producao:
+        dependency-type: production
+        update-types: ["minor", "patch"]
+      desenvolvimento:
+        dependency-type: development
+        update-types: ["minor", "patch"]
+      seguranca:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      # @types/node acompanha o major do Node da imagem; tipo mais novo que o
+      # runtime descreve API que não existe em execução.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+    ignore:
+      # Major do Node só quando a versão nova for LTS (a ímpar é Current) e de
+      # propósito, num PR com teste. Patch e digest continuam entrando.
+      - dependency-name: node
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
