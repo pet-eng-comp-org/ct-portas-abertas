@@ -7,6 +7,6 @@ COPY . .
 RUN npm run export   # next build && next export -> /app/out
 
 # --- runtime: serve HTML puro, sem Node (menos superficie de ataque) ---
-FROM nginx:1.27-alpine
+FROM nginx:1.29-alpine
 COPY --from=build /app/out /usr/share/nginx/html
 EXPOSE 80
