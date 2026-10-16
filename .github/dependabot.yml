@@ -45,6 +45,7 @@ updates:
     schedule:
       interval: weekly
     groups:
+      # Todas as actions num PR só, major inclusive: o CI do próprio PR testa o
+      # workflow, e um PR por action enchia a lista (6 no site-pet de uma vez).
       actions:
         patterns: ["*"]
-        update-types: ["minor", "patch"]
