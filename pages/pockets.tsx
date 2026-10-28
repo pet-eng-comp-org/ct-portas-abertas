@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 import styles from "../styles/pages/Booths.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import { URLMAPSCTIV } from "./booths";
 

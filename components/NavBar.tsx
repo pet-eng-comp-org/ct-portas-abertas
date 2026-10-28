@@ -1,6 +1,6 @@
 import styles from "../styles/components/NavBar.module.css";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -20,13 +20,8 @@ const SemanaDoConhecimentoLink =
   "https://www.ufes.br/conteudo/vem-ai-semana-do-conhecimento-atencao-aos-prazos-para-participar";
 
 export default function NavBar({ localPage }: NavBarProps) {
-  const [page, setPage] = useState<string | null>("");
+  const page = localPage;
   const [menuCollapsed, setMenuCollapsed] = useState<boolean>(true);
-
-  useEffect(() => {
-    // setPage(localStorage.getItem('CTPORTASABERTASPAGE'))
-    setPage(localPage);
-  }, []);
 
   return (
     <div className={styles.navbarContainer}>
@@ -82,35 +77,33 @@ export default function NavBar({ localPage }: NavBarProps) {
         <FiMenu />
       </div>
       <ul style={menuCollapsed ? { top: "-20rem" } : { top: "5rem" }}>
-        <Link href="./">
-          <li id={page == "index" ? styles.selected : ""}>PÁGINA INICIAL</li>
-        </Link>
+        <li id={page == "index" ? styles.selected : ""}>
+          <Link href="./">PÁGINA INICIAL</Link>
+        </li>
 
-        {/* <Link href="./signup">
-          <li id={page=='signup'?styles.selected:""}>CADASTRO</li>
-        </Link> */}
+        {/* <li id={page=='signup'?styles.selected:""}>
+   <Link href="./signup">CADASTRO</Link>
+ </li> */}
 
-        <Link href="./booths">
-          <li id={page == "booths" ? styles.selected : ""}>
-            MOSTRA DE PROJETOS
-          </li>
-        </Link>
+        <li id={page == "booths" ? styles.selected : ""}>
+          <Link href="./booths">MOSTRA DE PROJETOS</Link>
+        </li>
 
-        <Link href="./visitations">
-          <li id={page == "visitations" ? styles.selected : ""}>TRILHAS</li>
-        </Link>
+        <li id={page == "visitations" ? styles.selected : ""}>
+          <Link href="./visitations">TRILHAS</Link>
+        </li>
 
-        {/* <Link href="./workshops">
-          <li id={page == "workshops" ? styles.selected : ""}>OFICINAS</li>
-        </Link> */}
+        {/* <li id={page == "workshops" ? styles.selected : ""}>
+   <Link href="./workshops">OFICINAS</Link>
+ </li> */}
 
-        <Link href="./pockets">
-          <li id={page == "pockets" ? styles.selected : ""}>PALESTRA POCKET</li>
-        </Link>
+        <li id={page == "pockets" ? styles.selected : ""}>
+          <Link href="./pockets">PALESTRA POCKET</Link>
+        </li>
 
-        <Link href="./photos">
-          <li id={page == "photos" ? styles.selected : ""}>FOTOS</li>
-        </Link>
+        <li id={page == "photos" ? styles.selected : ""}>
+          <Link href="./photos">FOTOS</Link>
+        </li>
       </ul>
     </div>
   );
