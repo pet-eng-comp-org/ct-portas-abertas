@@ -10,6 +10,11 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: /
+    cooldown:
+      # Versao nova so e proposta depois de 7 dias publicada: pacote
+      # sequestrado costuma ser descoberto e retirado nesse prazo. Correcao
+      # de seguranca nao espera (o cooldown nao vale para ela).
+      default-days: 7
     schedule:
       interval: weekly
       day: monday
@@ -32,6 +37,8 @@ updates:
 
   - package-ecosystem: docker
     directory: /
+    cooldown:
+      default-days: 7
     schedule:
       interval: weekly
     ignore:
@@ -42,6 +49,8 @@ updates:
 
   - package-ecosystem: github-actions
     directory: /
+    cooldown:
+      default-days: 7
     schedule:
       interval: weekly
     groups:
