@@ -2,3 +2,5 @@ node_modules
 .next
 .env
 .http
+/out
+*.tsbuildinfo

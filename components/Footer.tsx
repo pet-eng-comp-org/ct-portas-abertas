@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import styles from '../styles/components/Footer.module.css'
 import UfesLogo from '../assets/UfesLogo.svg'
 import IntrocompLogo from '../assets/IntrocompLogo.svg'
