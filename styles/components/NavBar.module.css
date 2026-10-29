@@ -73,6 +73,9 @@
 
 .menuIconContainer {
   display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
   height: 3rem;
 }
 

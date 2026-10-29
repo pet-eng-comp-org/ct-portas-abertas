@@ -34,6 +34,11 @@ export default function NavBar({ localPage }: NavBarProps) {
           content="Espaço dedicado ao evento CT de Portas Abertas da UFES, venha conhecer!"
         />
         <meta content="CT de Portas Abertas - UFES - ES" property="og:title" />
+        <meta
+          content="Espaço dedicado ao evento CT de Portas Abertas da UFES, venha conhecer!"
+          property="og:description"
+        />
+        <meta content="https://ctportasabertas.pet.inf.ufes.br/HEADER.png" property="og:image" />
       </Head>
       <div className={styles.logoContainer}>
         <div className={styles.mostraLogo} title="Mostra de Profissões 2022">
@@ -59,7 +64,7 @@ export default function NavBar({ localPage }: NavBarProps) {
         </div>
 
         <div title="Site oficial da ufes" id={styles.ufeslogo}>
-          <a href="ufes.br">
+          <a href="https://www.ufes.br">
             <Image
               src={UfesLogo}
               alt="Ufes Logo"
@@ -70,12 +75,15 @@ export default function NavBar({ localPage }: NavBarProps) {
         </div>
       </div>
 
-      <div
+      <button
+        type="button"
         className={styles.menuIconContainer}
+        aria-label="Menu"
+        aria-expanded={!menuCollapsed}
         onClick={() => setMenuCollapsed(!menuCollapsed)}
       >
-        <FiMenu />
-      </div>
+        <FiMenu aria-hidden />
+      </button>
       <ul style={menuCollapsed ? { top: "-20rem" } : { top: "5rem" }}>
         <li id={page == "index" ? styles.selected : ""}>
           <Link href="./">PÁGINA INICIAL</Link>
