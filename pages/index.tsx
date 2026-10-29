@@ -13,6 +13,7 @@ const Home: NextPage = () => {
   return (
     <main className={styles.container}>
       <NavBar localPage={"index"} />
+      <h1 className="srOnly">CT de Portas Abertas</h1>
 
       <div className={styles.banner_container}>
         <div className={styles.banner_inside_container}>
@@ -28,9 +29,8 @@ const Home: NextPage = () => {
 
       <div className={styles.textContainer}>
         <p>
-          Em breve, a edição 2026 do CT de Portas Abertas! O evento faz parte da
-          Mostra de Profissões da Prograd, que ocorrerá nos dias 06 e 07 de
-          outubro de 2026. O CT de Portas Abertas tem como objetivo divulgar e
+          A edição 2026 do CT de Portas Abertas aconteceu nos dias 06 e 07 de
+          outubro, como parte da Mostra de Profissões da Prograd. O CT de Portas Abertas tem como objetivo divulgar e
           promover os cursos de Engenharia e Computação do Centro Tecnológico da
           UFES para alunos do ensino médio e técnico, sendo uma oportunidade
           única de obter informações valiosas sobre as diversas áreas de atuação

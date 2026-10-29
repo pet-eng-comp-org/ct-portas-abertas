@@ -38,3 +38,13 @@ a {
   --darkBlue: #172e64;
   --dark: #0c1935;
 }
+
+/* Titulo para leitor de tela quando o titulo visivel e uma imagem. */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
