@@ -7,6 +7,6 @@ COPY . .
 RUN npm run build    # output: "export" no next.config.js -> /app/out
 
 # --- runtime: serve HTML puro, sem Node (menos superficie de ataque) ---
-FROM nginx:1.30-alpine@sha256:47928bf67eb62a1863cb08d9ecb52d3e704304ba614eaee17884204677702951
+FROM nginx:1.31-alpine@sha256:713fc2ebfd92e8217db451477182ee91944b123d2b1ee9fd5a8c6e91ca6c3a11
 COPY --from=build /app/out /usr/share/nginx/html
 EXPOSE 80
