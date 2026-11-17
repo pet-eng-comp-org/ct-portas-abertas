@@ -3,7 +3,7 @@
 # nova sozinho a cada build. Site 100% estatico servido por nginx (sem backend).
 services:
   ct-portas-abertas:
-    image: ghcr.io/pet-eng-comp-org/ct-portas-abertas@sha256:2bf5eca98fb49b5d1c86fea05ba75f5b213fa8d9c356a549d63795e679ab6ee8
+    image: ghcr.io/pet-eng-comp-org/ct-portas-abertas@sha256:16c1b9a98afca9b1304f3d2421a37f800901f1252edf63f2f506d4495c92c58f
     logging:
       driver: json-file
       options:
